@@ -26,4 +26,11 @@ public class UserDetailsController {
 		System.out.println(userDetails.getLastName());
 		userDetailsDAO.addUser(userDetails);
 	}
+	
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public UserDetails user() {
+		return userDetailsDAO.detail();
+	}
+	
+	
 }
